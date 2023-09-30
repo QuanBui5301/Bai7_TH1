@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<script>
+    let a = 1
+    let b = Array()
+    let i = 0
+    while (a % 9 !== 0) {
+        b.push(a)
+        if (i === 0) {
+            a = a + 1
+        } else { a = a + b[i-1] }
+        i++
+    }
+    document.write(a)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<button onclick="game()">Play</button>
+<script>
+    function game() {
+        let range = +prompt("Nhap vao khoang gia tri muon doan")
+        if (range % 1 !== 0) {
+            alert("Vui long dien so!")
+        }
+        else {
+            let guess
+            let ran = Math.floor(Math.random()*range)
+            while (guess !== ran) {
+                guess = +prompt("Hay doan so")
+                if (guess > ran) {
+                    alert("Ket qua nho hon so ban chon")
+                }  else if (guess < ran) {
+                    alert("Ket qua lon hon so ban chon")
+                } else {
+                    alert("Ban da chon dung")
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
